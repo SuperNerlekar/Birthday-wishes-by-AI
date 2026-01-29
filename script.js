@@ -1,8 +1,33 @@
 // Store uploaded photos globally
 let uploadedPhotos = [];
 
+// Prevent double-tap zoom on iOS
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function(event) {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
+
+// Mobile-friendly photo upload with better touch feedback
+const photoUploadInput = document.getElementById('photoUpload');
+const uploadLabel = document.querySelector('.upload-label');
+
+// Add touch feedback
+if (uploadLabel) {
+    uploadLabel.addEventListener('touchstart', function() {
+        this.style.transform = 'scale(0.98)';
+    });
+    
+    uploadLabel.addEventListener('touchend', function() {
+        this.style.transform = 'scale(1)';
+    });
+}
+
 // Handle photo upload
-document.getElementById('photoUpload').addEventListener('change', function(e) {
+photoUploadInput.addEventListener('change', function(e) {
     const files = Array.from(e.target.files);
     const photoPreview = document.getElementById('photoPreview');
     
@@ -90,6 +115,16 @@ document.getElementById('birthdayName').addEventListener('keypress', function(e)
 
 // Add sparkle effect on button hover
 const createBtn = document.querySelector('.create-btn');
+
+// Add touch feedback for mobile
+createBtn.addEventListener('touchstart', function() {
+    this.style.transform = 'translateY(-2px) scale(0.98)';
+});
+
+createBtn.addEventListener('touchend', function() {
+    this.style.transform = 'translateY(-5px) scale(1)';
+});
+
 createBtn.addEventListener('mouseenter', function() {
     createSparkles(this);
 });

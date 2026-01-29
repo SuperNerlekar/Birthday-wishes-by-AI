@@ -2,6 +2,16 @@
 const birthdayName = sessionStorage.getItem('birthdayName');
 const birthdayPhotos = JSON.parse(sessionStorage.getItem('birthdayPhotos')) || [];
 
+// Prevent double-tap zoom on iOS
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function(event) {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
+
 // Display birthday name
 if (birthdayName) {
     document.getElementById('celebrantName').textContent = birthdayName;
@@ -84,10 +94,10 @@ document.body.style.animation = 'fadeIn 1s ease-out';
 createConfetti();
 displayPhotos();
 
-// Add candle click interaction
+// Add candle click interaction (works on both click and touch)
 const candles = document.querySelectorAll('.candle-flame');
 candles.forEach(candle => {
-    candle.addEventListener('click', function() {
+    const blowOutCandle = function() {
         this.style.animation = 'blowOut 0.5s forwards';
         
         setTimeout(() => {
@@ -99,6 +109,12 @@ candles.forEach(candle => {
         setTimeout(() => {
             this.textContent = '🔥';
         }, 2000);
+    };
+    
+    candle.addEventListener('click', blowOutCandle);
+    candle.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        blowOutCandle.call(this);
     });
 });
 
