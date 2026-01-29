@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="celebration-page">
+    <!-- Animated confetti -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Floating birthday elements -->
+    <div class="floating-elements celebration">
+        <div class="balloon balloon-1">🎈</div>
+        <div class="balloon balloon-2">🎀</div>
+        <div class="balloon balloon-3">🎁</div>
+        <div class="balloon balloon-4">✨</div>
+        <div class="balloon balloon-5">🎊</div>
+        <div class="balloon balloon-6">🌸</div>
+        <div class="balloon balloon-7">💝</div>
+        <div class="balloon balloon-8">🦋</div>
+        <div class="balloon balloon-9">🌟</div>
+        <div class="balloon balloon-10">💐</div>
+    </div>
+
+    <!-- Birthday Message -->
+    <main class="celebration-container">
+        <div class="birthday-header">
+            <div class="birthday-badge">🎂 Birthday Celebration 🎂</div>
+            <h1 class="birthday-title">
+                Happy Birthday
+                <span class="birthday-name" id="celebrantName"></span>!
+            </h1>
+            <div class="birthday-wishes">
+                <p class="wish-text">May your day be filled with joy, laughter, and endless happiness! 🌈</p>
+                <p class="wish-text">Here's to another amazing year of adventures and beautiful memories! 💖</p>
+            </div>
+        </div>
+
+        <!-- Photo Collage -->
+        <div class="collage-section">
+            <h2 class="collage-title">Cherished Memories 📸</h2>
+            <div id="photoCollage" class="photo-collage">
+                <!-- Photos will be inserted here by JavaScript -->
+            </div>
+            <div class="birthday-quotes">
+                <div class="quote-card">
+                    <p>"Age is merely the number of years the world has been enjoying you!"</p>
+                </div>
+                <div class="quote-card">
+                    <p>"Today is the perfect day to celebrate YOU! 🎉"</p>
+                </div>
+                <div class="quote-card">
+                    <p>"Wishing you 365 days of happiness and success ahead!"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giant Birthday Cake -->
+        <div class="giant-cake-section">
+            <h2 class="cake-title">Make a Wish! 🌟</h2>
+            <div class="giant-cake">
+                <div class="cake-candles">
+                    <div class="candle-stick">
+                        <div class="candle-flame">🔥</div>
+                    </div>
+                    <div class="candle-stick">
+                        <div class="candle-flame">🔥</div>
+                    </div>
+                    <div class="candle-stick">
+                        <div class="candle-flame">🔥</div>
+                    </div>
+                    <div class="candle-stick">
+                        <div class="candle-flame">🔥</div>
+                    </div>
+                    <div class="candle-stick">
+                        <div class="candle-flame">🔥</div>
+                    </div>
+                </div>
+                <div class="cake-tier tier-1">
+                    <div class="frosting"></div>
+                    <div class="decoration">🌸 🎀 🌸 🎀 🌸</div>
+                </div>
+                <div class="cake-tier tier-2">
+                    <div class="frosting"></div>
+                    <div class="decoration">💝 ✨ 💝 ✨ 💝</div>
+                </div>
+                <div class="cake-tier tier-3">
+                    <div class="frosting"></div>
+                    <div class="decoration">🦋 🌺 🦋 🌺 🦋 🌺 🦋</div>
+                </div>
+                <div class="cake-base"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="celebration-footer">
+        <div class="footer-content">
+            <div class="footer-text">Website Created by</div>
+            <div class="footer-brands">
+                <div class="claude-section">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D97757'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/%3E%3C/svg%3E" alt="Claude AI Logo" class="claude-logo">
+                    <span class="claude-name">Claude AI</span>
+                </div>
+                <span class="separator">&</span>
+                <div class="dev-section">
+                    <span class="dev-name-footer">Swaraj Nerlekar</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="celebration.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes by AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating birthday elements -->
+    <div class="floating-elements">
+        <div class="balloon balloon-1">🎈</div>
+        <div class="balloon balloon-2">🎀</div>
+        <div class="balloon balloon-3">🎁</div>
+        <div class="balloon balloon-4">✨</div>
+        <div class="balloon balloon-5">🎊</div>
+        <div class="balloon balloon-6">🌸</div>
+        <div class="balloon balloon-7">💝</div>
+        <div class="balloon balloon-8">🦋</div>
+        <div class="confetti"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="creator-tag">Website Created by <span class="claude-brand">Claude AI</span> & <span class="dev-name">Swaraj Nerlekar</span></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="title-section">
+            <h1 class="main-title">
+                Welcome to Birthday Wishes by 
+                <span class="ai-text">
+                    <span class="ai-letter">A</span><span class="ai-letter">I</span>
+                </span>
+            </h1>
+            <div class="subtitle">Create magical birthday wishes with love ✨</div>
+        </div>
+
+        <div class="content-box">
+            <div class="input-section">
+                <h2 class="section-title">Who's the Birthday Star? 🌟</h2>
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="birthdayName" 
+                        placeholder="Enter their special name..."
+                        class="name-input"
+                    />
+                    <label class="floating-label">Birthday Person's Name</label>
+                </div>
+
+                <div class="photo-upload-section">
+                    <h3 class="upload-title">Add Sweet Memories 📸</h3>
+                    <div class="upload-wrapper">
+                        <input 
+                            type="file" 
+                            id="photoUpload" 
+                            accept="image/*" 
+                            multiple
+                            class="photo-input"
+                        />
+                        <label for="photoUpload" class="upload-label">
+                            <div class="upload-icon">🌈</div>
+                            <span>Choose Photos</span>
+                            <div class="upload-hint">Click to select beautiful memories</div>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="create-btn" onclick="createWishes()">
+                    <span class="btn-text">Create Birthday Magic</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+
+            <div class="photos-section">
+                <h3 class="photos-title">Your Beautiful Memories 💕</h3>
+                <div id="photoPreview" class="photo-grid">
+                    <div class="empty-state">
+                        <div class="empty-icon">🎨</div>
+                        <p>Your photos will appear here like magic!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Decorative cake at bottom -->
+    <div class="decorative-cake">
+        <div class="cake-layer layer-3"></div>
+        <div class="cake-layer layer-2"></div>
+        <div class="cake-layer layer-1"></div>
+        <div class="candle"></div>
+        <div class="flame">🔥</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
